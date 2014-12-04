@@ -21,7 +21,7 @@ public class Centre {
 	private int id;
 	private String code;
 	private String address;
-	private List<Programme> programmes;
+	//private List<Programme> programmes;
 	
 	/**
 	 * @return the id
@@ -59,18 +59,5 @@ public class Centre {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	/**
-	 * @return the programmes
-	 */
-	public List<Programme> getProgrammes() {
-		return programmes;
-	}
-	/**
-	 * @param programmes the programmes to set
-	 */
-	public void setProgrammes(List<Programme> programmes) {
-		this.programmes = programmes;
-	}
 	
-
 }

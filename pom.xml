@@ -54,9 +54,6 @@
 				<artifactId>hibernate3-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-						<configurationFile>
-							/src/main/resources/META-INF/persistence.xml
-						</configurationFile>
 					<components>
 						<component>
 							<name>hbm2ddl</name>
@@ -64,11 +61,34 @@
 						</component>
 					</components>
 					<componentProperties>
+						<persistenceunit>gurukul</persistenceunit>
 						<console>false</console>
+						<format>true</format>
+						<outputfilename>schema.ddl</outputfilename>
+						<drop>false</drop>
+						<create>true</create>
+						<export>false</export>
 						<format>true</format>
 					</componentProperties>
 				</configuration>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>hbm2ddl</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
+			 <plugin>
+                 <artifactId>maven-compiler-plugin</artifactId>
+                 <version>2.3.2</version>
+                 <configuration>
+                     <source>1.7</source>
+                     <target>1.7</target>
+                     <compilerArgument></compilerArgument>
+                 </configuration>
+             </plugin>
 		</plugins>
 	</build>
 </project>

@@ -18,8 +18,8 @@ public class Programme {
 	@Id @GeneratedValue(strategy=GenerationType.TABLE, generator="programme_id")
 	private int id;
 	private String name;
-	private Centre centre;
-	private List<Subject> subjects;
+	//private Centre centre;
+	//private List<Subject> subjects;
 	
 	/**
 	 * @return the id
@@ -47,27 +47,14 @@ public class Programme {
 	}
 	/**
 	 * @return the centre
-	 */
+	 *//*
 	public Centre getCentre() {
 		return centre;
 	}
-	/**
+	*//**
 	 * @param centre the centre to set
-	 */
+	 *//*
 	public void setCentre(Centre centre) {
 		this.centre = centre;
-	}
-	/**
-	 * @return the subjects
-	 */
-	public List<Subject> getSubjects() {
-		return subjects;
-	}
-	/**
-	 * @param subjects the subjects to set
-	 */
-	public void setSubjects(List<Subject> subjects) {
-		this.subjects = subjects;
-	}
-
+	}*/	
 }

@@ -12,7 +12,7 @@ public class Subject {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String name;
-	private Programme programme;
+	//private Programme programme;
 	private int noOfChapters;
 	/**
 	 * @return the id
@@ -41,15 +41,15 @@ public class Subject {
 	/**
 	 * @return the programme
 	 */
-	public Programme getProgramme() {
+	/*public Programme getProgramme() {
 		return programme;
 	}
-	/**
+	*//**
 	 * @param programme the programme to set
-	 */
+	 *//*
 	public void setProgramme(Programme programme) {
 		this.programme = programme;
-	}
+	}*/
 	/**
 	 * @return the noOfChapters
 	 */
