@@ -1,11 +1,13 @@
 package com.anoop.gurukul.student;
 
-import javax.annotation.Generated;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
@@ -22,9 +24,9 @@ public class Student {
 	@JoinColumn(name="centre_id")
 	private Centre centre;
 	
-	@ManyToOne
-	@JoinColumn(name="programme_id")
-	private Programme programme;
+	//considering one student can enroll in multiple programmes
+	@ManyToMany
+	private List<Programme> programmes;
 	
 	public int getId() {
 		return id;
@@ -44,13 +46,19 @@ public class Student {
 	public void setCentre(Centre centre) {
 		this.centre = centre;
 	}
+	public List<Programme> getProgrammes() {
+		return programmes;
+	}
+	public void setProgrammes(List<Programme> programmes) {
+		this.programmes = programmes;
+	}
 	
-	public Programme getProgramme() {
+	/*public Programme getProgramme() {
 		return programme;
 	}
 	public void setProgramme(Programme programme) {
 		this.programme = programme;
-	}
+	}*/
 	
 
 }

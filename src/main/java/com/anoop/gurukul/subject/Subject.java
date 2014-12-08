@@ -12,7 +12,6 @@ public class Subject {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String name;
-	//private Programme programme;
 	private int noOfChapters;
 	/**
 	 * @return the id

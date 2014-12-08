@@ -63,13 +63,13 @@
 					</components>
 					<componentProperties>
 						<persistenceunit>gurukul</persistenceunit>
-						<configurationfile>src/main/resources/META-INF/persistence.xml</configurationfile>
+						<!-- <configurationfile>src/main/java/hibernate.cfg.xml</configurationfile> -->
 						<console>true</console>
 						<format>true</format>
 						<outputfilename>schema.ddl</outputfilename>
 						<drop>true</drop>
 						<create>true</create>
-						<export>true</export>
+						<export>false</export>
 						<format>true</format>
 					</componentProperties>
 				</configuration>

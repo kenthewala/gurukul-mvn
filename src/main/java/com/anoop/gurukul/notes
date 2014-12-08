@@ -1,1 +1,8 @@
 @onetoone is pending.
+@Many to one is pending
+
+prg- subject many to many
+centre - programme one to many
+programme - student many to many
+programme-examination one to many
+programme-subject one to many
