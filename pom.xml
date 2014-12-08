@@ -48,6 +48,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+	<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -62,12 +63,13 @@
 					</components>
 					<componentProperties>
 						<persistenceunit>gurukul</persistenceunit>
-						<console>false</console>
+						<configurationfile>src/main/resources/META-INF/persistence.xml</configurationfile>
+						<console>true</console>
 						<format>true</format>
 						<outputfilename>schema.ddl</outputfilename>
-						<drop>false</drop>
+						<drop>true</drop>
 						<create>true</create>
-						<export>false</export>
+						<export>true</export>
 						<format>true</format>
 					</componentProperties>
 				</configuration>
@@ -90,5 +92,6 @@
                  </configuration>
              </plugin>
 		</plugins>
+		</pluginManagement>
 	</build>
 </project>

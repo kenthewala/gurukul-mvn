@@ -1,7 +1,5 @@
 package com.anoop.gurukul.centre;
 
-import java.util.List;
-
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
@@ -9,8 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-
-import com.anoop.gurukul.programme.Programme;
 
 
 @Entity
@@ -21,6 +17,7 @@ public class Centre {
 	private int id;
 	private String code;
 	private String address;
+	
 	//private List<Programme> programmes;
 	
 	/**
