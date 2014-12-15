@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 import com.anoop.gurukul.programme.Programme;
+import com.anoop.gurukul.util.Address;
 
 
 @Entity
@@ -21,7 +23,8 @@ public class Centre {
 	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="centre_id")
 	private int id;
 	private String code;
-	private String address;
+	@Embedded
+	private Address address;
 	
 	@OneToMany(mappedBy="centre",targetEntity=Programme.class)
 	private List<Programme> programmes;
@@ -53,13 +56,13 @@ public class Centre {
 	/**
 	 * @return the address
 	 */
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 	/**
 	 * @param address the address to set
 	 */
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 	
